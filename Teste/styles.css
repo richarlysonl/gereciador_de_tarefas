@@ -1,0 +1,284 @@
+/* Resets e básicos */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f6d365, #fda085);
+    color: #333;
+}
+
+header {
+    background-color: rgba(255, 234, 97, 0.9);
+    padding: 10px 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(255, 234, 97, 0.6);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+#menu-toggle {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #5a4b00;
+    user-select: none;
+    padding: 5px 10px;
+}
+
+#menu {
+    list-style: none;
+    display: flex;
+    gap: 12px;
+}
+
+#menu.hidden {
+    display: none;
+}
+
+#menu li button {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #5a4b00;
+    cursor: pointer;
+    padding: 7px 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+#menu li button:hover,
+#menu li button:focus {
+    background-color: #fffde7;
+    outline: none;
+}
+
+main {
+    max-width: 350px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #5a4b00;
+    text-shadow: 0 0 5px #fffde7;
+}
+
+form {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(255, 234, 97, 0.6);
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    color: #5a4b00;
+}
+
+label {
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+input[type="date"],
+textarea {
+    padding: 12px 12px;
+    border-radius: 12px;
+    border: none;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    outline: none;
+    font-weight: 600;
+    color: #5a4b00;
+    background-color: #fffde7;
+    transition: box-shadow 0.3s ease;
+    resize: vertical;
+}
+
+/* Aumenta a altura do textarea de descrição para caber mais caracteres */
+textarea {
+    min-height: 120px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus,
+input[type="date"]:focus,
+textarea:focus {
+    box-shadow: 0 0 8px #ffea61;
+}
+
+.btn-primary {
+    background: #ffea61;
+    border: none;
+    padding: 14px;
+    border-radius: 14px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #5a4b00;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    user-select: none;
+    box-shadow: 0 6px 20px rgba(255, 234, 97, 0.7);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background: #f7d531;
+    box-shadow: 0 8px 28px rgba(255, 234, 97, 0.9);
+    outline: none;
+}
+
+.extra-links {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.btn-link {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: #5a4b00;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: underline;
+    user-select: none;
+    transition: color 0.3s ease;
+}
+
+.btn-link:hover,
+.btn-link:focus {
+    color: #ffea61;
+    outline: none;
+}
+
+.error-message {
+    background: rgba(255, 105, 0, 0.8);
+    padding: 10px 14px;
+    margin-bottom: 16px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #fff;
+    text-align: center;
+    display: none;
+    box-shadow: 0 4px 15px rgba(255, 105, 0, 0.7);
+}
+
+#task-cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 40px;
+}
+
+/* Card tarefa igual ao estilo anterior */
+.task-card {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 18px 22px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(255, 234, 97, 0.6);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: #5a4b00;
+    position: relative;
+}
+
+.task-card h3 {
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 1.3rem;
+    text-shadow: 0 0 4px #fffde7;
+}
+
+.task-card p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #654f00;
+}
+
+.task-card .task-type {
+    font-weight: 600;
+    font-size: 0.9rem;
+    background-color: #fffde7;
+    color: #5a4b00;
+    padding: 4px 10px;
+    border-radius: 12px;
+    width: fit-content;
+    user-select: none;
+    box-shadow: 0 0 7px #ffea61 inset;
+}
+
+.task-card .task-date {
+    font-size: 0.9rem;
+    color: #886f00;
+}
+
+.task-card .task-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.task-card button {
+    flex: 1;
+    background: #ffea61;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 0;
+    font-weight: 700;
+    color: #5a4b00;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    user-select: none;
+    box-shadow: 0 5px 15px rgba(255, 234, 97, 0.7);
+}
+
+.task-card button:hover,
+.task-card button:focus {
+    background: #f7d531;
+    box-shadow: 0 7px 25px rgba(255, 234, 97, 0.9);
+    outline: none;
+}
+
+/* Responsividade */
+@media (max-width: 400px) {
+    main {
+        padding: 0 15px;
+        margin: 15px auto;
+        max-width: 100%;
+    }
+
+    header nav {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    #menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
