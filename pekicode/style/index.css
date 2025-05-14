@@ -1,0 +1,46 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f6d365, #fda085);
+    color: #5a4b00;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+/* Botões principais da tela inicial */
+button {
+    background: #ffea61;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 14px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #5a4b00;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    user-select: none;
+    box-shadow: 0 6px 20px rgba(255, 234, 97, 0.7);
+}
+
+button:hover,
+button:focus {
+    background: #f7d531;
+    box-shadow: 0 8px 28px rgba(255, 234, 97, 0.9);
+    outline: none;
+}
+
+/* Link para manter espaçamento e alinhamento */
+a {
+    text-decoration: none;
+}

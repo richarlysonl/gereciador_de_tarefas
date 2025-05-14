@@ -1,1 +1,1 @@
-readme
+crie o banco de dados usando o arquivo de texto sql.txt, depois abra o projeto em um servidor e ele funcionará normalmente, caso não funcione será preciso entrar no diretorio pekicode para ele rodar.
