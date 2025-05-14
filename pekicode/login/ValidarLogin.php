@@ -22,9 +22,6 @@ $sql_code = "SELECT * FROM usuario WHERE email = '$email'";
         }else {
             //senha incorreta
             echo "Senha incorreta<br>";
-            echo "$senha<br>";
-            echo ($dados['senha'] .'<br>');
-            echo "$senha";
     }
     //dados falsos + error
     }else{

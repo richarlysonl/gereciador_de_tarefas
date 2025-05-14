@@ -21,5 +21,6 @@ if ($quant == 0) {
     $_SESSION['userEmail'] = $dados['email'];
     header('Location: ../exibir.php');
 } else {
-    echo "usuario invalido";
+    echo "usuario invalido ou email já existe<br>";
+    echo "<a href='cadastrar.php'><button name='voltar'>voltar</button></a>";
 }
