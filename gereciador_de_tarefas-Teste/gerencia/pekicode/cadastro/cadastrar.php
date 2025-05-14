@@ -27,13 +27,14 @@
 <script>
 document.getElementById('formulario').addEventListener('submit', function(e) {
   const form = this;
+  const nome = form.user.value.trim();
   const email = form.email.value.trim();
   const senha = form.senha.value.trim();
   const erro = document.getElementById('erro');
 
   erro.style.display = 'none';
 
-  if (!email || !senha) {
+  if (!email || !senha || !nome) {
     e.preventDefault();
     erro.textContent = 'Todos os campos são obrigatórios.';
     erro.style.display = 'block';
@@ -49,6 +50,5 @@ document.getElementById('formulario').addEventListener('submit', function(e) {
   // Se chegou aqui, o formulário é enviado normalmente para o PHP
 });
 </script>
-
 </body>
 </html>
