@@ -1,1 +1,1 @@
-readme
+Primeiro passo para rodar o codigo que foi postado no vercel, abra a pasta Teste, depois execute o index.html que estara la dentro depois disso e so usar do site.
